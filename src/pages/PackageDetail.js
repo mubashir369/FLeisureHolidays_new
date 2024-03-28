@@ -26,7 +26,7 @@ function PackageDetail() {
         className="probootstrap-cover overflow-hidden relative"
         style={{
           backgroundImage: data.coverImg
-            ? `url(${data.coverImg})`
+            ? `url(${data.imagePath?data.imagePath:""}${data.coverImg})`
             : 'url("/assets/images/bg_1.jpg")',
           height: "400px",
         }}
@@ -196,7 +196,7 @@ function PackageDetail() {
                     }
                     data-animate-effect="fadeIn"
                     style={{
-                      backgroundImage: `url(${obj.img?obj.img:data.img})`,
+                      backgroundImage: `url(${data.imagePath?data.imagePath:""}${obj.img?obj.img:data.img})`,
                       height: "500px",
                     }}
                   />
